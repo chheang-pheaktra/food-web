@@ -41,5 +41,4 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/profile', [\App\Http\Controllers\AdminController::class, 'profilepage'])->name('admin/profile');
 
-
 });
