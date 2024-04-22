@@ -17,4 +17,12 @@ class UserController extends Controller
     {
         return view('about');
     }
+    public function cart()
+    {
+        return view('cart');
+    }
+    public function shop()
+    {
+        return view('shop');
+    }
 }

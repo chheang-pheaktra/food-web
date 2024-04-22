@@ -18,7 +18,8 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about', [\App\Http\Controllers\UserController::class, 'about'])->name('about');
-
+Route::get('/cart',[\App\Http\Controllers\UserController::class,'cart'])->name('cart');
+Route::get('shop',[\App\Http\Controllers\UserController::class,'shop'])->name('shop');
 Route::controller(\App\Http\Controllers\AuthController::class)->group(function () {
     Route::get('register', 'register')->name('register');
     Route::post('register', 'registerSave')->name('register.save');
