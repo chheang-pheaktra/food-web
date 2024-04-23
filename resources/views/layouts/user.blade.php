@@ -42,8 +42,8 @@
                     <!-- Dropdown menu -->
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow " id="user-dropdown">
                         <div class="px-4 py-3">
-                            <span class="block text-sm text-gray-900 ">Bonnie Green</span>
-                            <span class="block text-sm  text-gray-500 truncate ">name@flowbite.com</span>
+                            <span class="block text-sm text-gray-900 ">Chheang Pheaktra</span>
+                            <span class="block text-sm  text-gray-500 truncate ">pheaktra@gmail.com</span>
                         </div>
                         <ul class="py-2" aria-labelledby="user-menu-button">
                             <li>
