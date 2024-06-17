@@ -1,8 +1,8 @@
 @extends('layouts.user')
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet" />
+{{--<script src="https://cdn.tailwindcss.com"></script>--}}
+{{--<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />--}}
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>--}}
+{{--<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet" />--}}
 @section('title', 'Home')
 @section('contents')
     <header>
@@ -12,11 +12,11 @@
                     <div class="mb-4 lg:mb-0 lg:max-w-lg">
                         <div class="mb-6 max-w-xl">
                             <div>
-                                <p class="bg-teal-accent-400 mb-2 inline-block rounded-full px-3 py-px text-xs font-semibold uppercase tracking-wider text-indigo-900">Approved by google</p>
+                                <p class="bg-teal-accent-400 mb-2 inline-block rounded-full px-3 py-px text-xs font-semibold uppercase tracking-wider text-indigo-900">Rupp</p>
                             </div>
                             <h2 class="mb-6 max-w-lg text-3xl font-bold tracking-tight text-slate-700 sm:text-5xl sm:leading-snug">
-                                World's Best <br />
-                                <span class="inline-block font-bold text-orange-600">Programming Tutors</span>
+                                Enjoy With <br />
+                                <span class="inline-block font-bold text-orange-600">NHAM NHAM</span>
                             </h2>
                             <p class="text-base text-gray-700 md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ullam rem voluptatem, animi tempora expedita!Lorem ipsum dolor.</p>
                         </div>
@@ -27,13 +27,12 @@
                     </div>
                 </div>
                 <!-- /Left Column -->
-
                 <!-- Right Column -->
                 <div class="flex h-full w-full space-x-3 overflow-hidden md:justify-end lg:px-2">
                     <!-- Col 2 -->
                     <div class="my-auto mb-10 hidden w-56 flex-col space-y-3 md:mt-36 lg:flex">
                         <div class="rounded-xl bg-yellow-400 pt-10">
-                            <img class="animate-bounce  h-full w-full object-contain" src="{{asset('/asset/pic3.png')}}" alt="" />
+                            <img class=" animate-bounce h-full w-full object-contain" src="{{asset('/asset/pic3.png')}}" alt="" />
                         </div>
                     </div>
                     <div class="my-auto flex space-x-3 rounded-xl md:mt-36 md:w-60 md:flex-col md:space-y-3 md:space-x-0 md:px-4">
@@ -60,37 +59,22 @@
                 </h2>
                 <div
                     class="gr mx-auto max-w-3xl items-stretch space-y-4 text-left sm:flex sm:space-y-0 sm:space-x-8 sm:text-center">
-                    <a class="flex w-full items-center rounded-xl border-2 border-orange-500 border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg hover:shadow-orange-500 sm:flex-col sm:hover:shadow-2xl"
-                       href="#" target="_blank">
-                        <img class="mr-4 w-12 h-12 sm:mr-0 sm:h-32 sm:w-32" src="{{asset('asset/drink-categories.png')}}" alt="Framework7">
-                        <div>
-                            <div class="font-semibold text-gray-700  sm:mt-4 sm:mb-2">Drink</div>
-                            <div class="text-sm opacity-75">Full featured framework for building iOS
+                    @foreach($category as $categories)
+                        <a class="flex w-full items-center rounded-xl border-2 border-orange-500 border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg hover:shadow-orange-500 sm:flex-col sm:hover:shadow-2xl"
+                           href="#" target="_blank">
+                            <img class="mr-4 w-12 h-12 sm:mr-0 sm:h-32 sm:w-32" src="{{asset($categories->thumbnail)}}" alt="Framework7">
+                            <div>
+                                <div class="font-semibold text-gray-700  sm:mt-4 sm:mb-2">{{$categories->title}}</div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="flex w-full items-center rounded-xl border-2 border-orange-600 border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg  sm:flex-col sm:hover:shadow-2xl"
-                       href="#" target="_blank">
-                        <img class="mr-4 w-12 sm:mr-0 sm:h-32 sm:w-32" src="{{asset('asset/food-categories.png')}}" alt="Atropos">
-                        <div>
-                            <div class="font-semibold text-gray-700  sm:mt-4 sm:mb-2">Foods</div>
-                            <div class="text-sm opacity-75">Stunning touch-friendly 3D parallax hover effects</div>
-                        </div>
-                    </a>
-                    <a class="flex w-full items-center rounded-xl border-2 border-orange-600 border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg  sm:flex-col sm:hover:shadow-2xl"
-                       href="#" target="_blank">
-                        <img class="mr-4 w-12 sm:mr-0 sm:h-32 sm:w-32" src="{{asset('asset/vegetable-categories.png')}}" alt="Konsta UI">
-                        <div>
-                            <div class="font-semibold text-gray-700  sm:mt-4 sm:mb-2">Vegetable</div>
-                            <div class="text-sm opacity-75">Pixel perfect mobile UI components built with Tailwind CSS</div>
-                        </div>
-                    </a>
+                        </a>
+                    @endforeach
+
                 </div>
             </div>
         </section>
         <section>
             <div class="relative overflow-hidden pt-16 pb-32 space-y-24">
-                <div class="relative">
+                <div class="relative ">
                     <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
                         <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ">
 
